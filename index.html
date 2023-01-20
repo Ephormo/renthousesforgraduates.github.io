@@ -33,19 +33,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
 
-@Override  
-    public void doFilter(ServletRequest req, ServletResponse res,  
-            FilterChain chain) throws IOException, ServletException {  
-            HttpServletResponse response = (HttpServletResponse) res;  
-            response.setHeader("Access-Control-Allow-Origin", "*");  //允许所有来源访问
-            response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");  //允许访问的方式  
-            response.setHeader("Access-Control-Max-Age", "3600"); // 超时时长
-            response.setHeader("Access-Control-Allow-Headers", "x-requested-with"); // 自定义的头信息
-            chain.doFilter(req, res);  
-          
-    }
-
-
 
 </head>
 
